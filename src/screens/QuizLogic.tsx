@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 import React, { useEffect, useState } from "react";
-import LessonLayout from "../components/LessonLayout";
+import LessonLayout, { ETypeImage } from "../components/LessonLayout";
 import { Center, VStack, useTheme } from "native-base";
 import GroupAnswer from "../components/GroupAnswer";
 import { IQuizImage } from "../types/utils";
@@ -13,13 +13,13 @@ type Props = {};
 
 const listTestImage: IQuizImage[] = [
   {
-    imageUrl: '',
-    choices: [5, 3 , 1],
+    imageUrl: "",
+    choices: [5, 3, 1],
     answer: 5,
   },
   {
-    imageUrl: '',
-    choices: [5, 3 , 1],
+    imageUrl: "",
+    choices: [5, 3, 1],
     answer: 5,
   },
 ];
@@ -50,7 +50,10 @@ const QuizLogic = (props: Props) => {
   }, [answerTag]);
 
   return (
-    <LessonLayout iconSource={require("../../assets/images/bg-2.jpg")}>
+    <LessonLayout
+      iconSource={require("../../assets/images/bg-1.png")}
+      type={ETypeImage.LOGIC}
+    >
       <PopupRightAnswer
         showModal={showModal}
         setShowModal={setShowModal}

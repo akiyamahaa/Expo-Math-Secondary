@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 import React, { useEffect, useState } from "react";
-import LessonLayout from "../components/LessonLayout";
+import LessonLayout, { ETypeImage } from "../components/LessonLayout";
 import { Center, VStack } from "native-base";
 import { EQuizStatus, IAnserTag } from "../types/utils";
 import Formula from "../components/Formula";
@@ -16,9 +16,7 @@ type Props = {} & NativeStackScreenProps<RootStackParams, "Quiz">;
 const Quiz = (props: Props) => {
   const { route, navigation } = props;
   const { operation } = route.params;
-  const [listTest] = useState(
-    getRandomArray(quizzes[operation], 5)
-  );
+  const [listTest] = useState(getRandomArray(quizzes[operation], 5));
   const [answerTag, setAnswerTag] = useState<IAnserTag>(null);
   const [quesIndex, setQuesIndex] = useState(0);
   const [showModal, setShowModal] = useState(false);
@@ -43,7 +41,10 @@ const Quiz = (props: Props) => {
   }, [answerTag]);
 
   return (
-    <LessonLayout iconSource={require("../../assets/images/bg-2.jpg")}>
+    <LessonLayout
+      iconSource={require("../../assets/images/bg-1.png")}
+      type={ETypeImage.QUIZ}
+    >
       <PopupRightAnswer
         showModal={showModal}
         setShowModal={setShowModal}

@@ -15,21 +15,21 @@ const FormulaLogic = (props: Props) => {
   return (
     <HStack space={8} alignItems={"center"}>
       {/* Formula */}
-      <HStack height={160} space={2}>
+      <HStack height={160} space={2} flex={1}>
         <Image
           style={{
-            width: 200,
-            borderRadius: 12
+            width: "100%",
           }}
           contentFit="contain"
-          source={{ uri: 'https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2020/4/19/799500/Cau-Do-Tinh-Toan5.jpg' }} />
-      </HStack  >
-      <Text color={"white"} fontSize={48} fontFamily={EFont.Quicksand_700Bold}>
+          source={{
+            uri: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2020/4/19/799500/Cau-Do-Tinh-Toan5.jpg",
+          }}
+        />
+      </HStack>
+      {/* <Text color={"white"} fontSize={48} fontFamily={EFont.SourceSansPro_700Bold}>
         =
       </Text>
-      {/* Box Ques */}
-      {props.answerTag ? props.answerTag : <BoxQuestion size={"M"} />}
-      {/* Box Ans */}
+      {props.answerTag ? props.answerTag : <BoxQuestion size={"M"} />} */}
     </HStack>
   );
 };

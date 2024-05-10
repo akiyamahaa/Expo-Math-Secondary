@@ -38,7 +38,7 @@ const PopupParent = (props: Props) => {
               justifyContent={"space-between"}
             >
               <Text
-                fontFamily={EFont.Quicksand_700Bold}
+                fontFamily={EFont.SourceSansPro_700Bold}
                 fontSize={20}
                 color={"text.primary"}
               >
@@ -47,7 +47,7 @@ const PopupParent = (props: Props) => {
               <CloseBtn handleBtn={() => setShowModal(false)} />
             </HStack>
             <Box pl={1} pr={3}>
-              <Text fontFamily={EFont.Quicksand_400Regular} fontSize={14}>
+              <Text fontFamily={EFont.SourceSansPro_400Regular} fontSize={14}>
                 Xin chào, chúng tôi rất vui khi quý vị đã lựa chọn sử dụng ứng
                 dụng dạy toán M4K. Để sử dụng một cách hiệu quả nhất, chúng tôi
                 có một số hướng dẫn sử dụng như sau: 

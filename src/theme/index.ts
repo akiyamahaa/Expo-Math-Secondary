@@ -6,7 +6,7 @@ import { extendTheme } from "native-base";
 
 export const newColorTheme = {
   primary: {
-    blue: "#3987B9",
+    blue: "#8054FF",
   },
   gradient: {
     secondary: {
@@ -19,20 +19,20 @@ export const newColorTheme = {
         color2: "#FF3F54",
       },
       orange: {
-        color1: "#FFD21C",
-        color2: "#FF9F1F",
+        color1: "#9E93FD",
+        color2: "#A45AF4",
       },
     },
     primary: {
-      color1: "#45DEFF",
-      color2: "#2671E1",
+      color1: "#5c2ce8",
+      color2: "#8054FF",
     },
   },
   text: {
     50: "#FAFAFA",
     0: "#FFF",
     coolGray: "#1F2937",
-    primary: "#4CACE9",
+    primary: "#8054FF",
     black: "#000",
   },
 };
@@ -40,33 +40,30 @@ export const newColorTheme = {
 const appTheme = extendTheme({
   colors: newColorTheme,
   fontConfig: {
-    Quicksand: {
+    SourceSansPro: {
       300: {
-        normal: "Quicksand_300Light",
+        normal: "SourceSansPro_300Light",
       },
       400: {
-        normal: "Quicksand_400Regular",
-      },
-      500: {
-        normal: "Quicksand_400Regular",
+        normal: "SourceSansPro_400Regular",
       },
       600: {
-        normal: "Quicksand_600SemiBold",
+        normal: "SourceSansPro_600SemiBold",
       },
       700: {
-        normal: "Quicksand_700Bold",
+        normal: "SourceSansPro_700Bold",
       },
     },
   },
   fonts: {
-    heading: "Quicksand",
-    body: "Quicksand",
-    mono: "Quicksand",
+    heading: "SourceSansPro",
+    body: "SourceSansPro",
+    mono: "SourceSansPro",
   },
 });
 
 export type AppThemeType = typeof appTheme;
 declare module "native-base" {
-  interface ICustomTheme extends AppThemeType { }
+  interface ICustomTheme extends AppThemeType {}
 }
 export default appTheme;

@@ -1163,10 +1163,20 @@
     "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
 
+"@expo-google-fonts/allan@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/allan/-/allan-0.2.3.tgz#762275a917746900a42be895e30c69c69bd21793"
+  integrity sha512-cAzOceK9SGY9ObxGIcLXWS59f8CcCVXK0XIP28U8/cbL2x5wQBbMqecwNv21ahwaB7Xosqh0eBfUaijttUIJmg==
+
 "@expo-google-fonts/quicksand@^0.2.3":
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/quicksand/-/quicksand-0.2.3.tgz#4838a1b380eefaa8478e63e6f113bd1b495c29d7"
   integrity sha512-cQhYsOYPBbKzqry0TT87fJz8ZlCKLLeHiECsjI9zRx4pMB3XKnHSWNO7JBDvMA6w9ekcQ17aaBZ4vj9RC2Kgtw==
+
+"@expo-google-fonts/source-sans-pro@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/source-sans-pro/-/source-sans-pro-0.2.3.tgz#e667c909d04bb676c1066562be763395fc4b00b4"
+  integrity sha512-/vDE5/vECqJT4Xdi1QiKG6rL8+mdrvqu3OlSe2dMPB7B9BR+cWsu0fSHTqRa1cQY03bXSPSIwOiHG4fy/CHBJg==
 
 "@expo/bunyan@4.0.0", "@expo/bunyan@^4.0.0":
   version "4.0.0"

@@ -16,15 +16,15 @@ const CustomBtn = (props: Props) => {
   const { text, size, btnColor, handleBtn, disabled = false,...boxProps } = props;
   let width, height, fontSize;
   if (size == "MD") {
-    width = 220;
-    height = 40;
-    fontSize = 16;
+    width = 180;
+    height = 42;
+    fontSize = 14;
   } else if (size == "XS") {
     width = 160;
     height = 32;
     fontSize = 14;
   } else if (size == "SM") {
-    width = 110;
+    width = 120;
     height = 40;
     fontSize = 16;
   }
@@ -43,8 +43,8 @@ const CustomBtn = (props: Props) => {
         >
           <Text
             fontSize={fontSize}
-            color="white"
-            fontFamily={EFont.Quicksand_700Bold}
+            color="#FAFAFA"
+            fontFamily={EFont.SourceSansPro_700Bold}
           >
             {text}
           </Text>

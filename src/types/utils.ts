@@ -4,11 +4,11 @@ export interface IGradientColor {
 }
 
 export enum EFont {
-  Quicksand_300Light = "Quicksand_300Light",
-  Quicksand_400Regular = "Quicksand_400Regular",
-  Quicksand_500Medium = "Quicksand_500Medium",
-  Quicksand_600SemiBold = "Quicksand_600SemiBold",
-  Quicksand_700Bold = "Quicksand_700Bold",
+  SourceSansPro_300Light = "SourceSansPro_300Light",
+  SourceSansPro_400Regular = "SourceSansPro_400Regular",
+  SourceSansPro_500Medium = "SourceSansPro_500Medium",
+  SourceSansPro_600SemiBold = "SourceSansPro_600SemiBold",
+  SourceSansPro_700Bold = "SourceSansPro_700Bold",
 }
 
 export enum EOperation {

@@ -40,14 +40,14 @@ const PopupRightAnswer = (props: Props) => {
               <VStack flex={1} alignItems={"center"} justifyContent={"center"}>
                 <Text
                   fontSize={24}
-                  fontFamily={EFont.Quicksand_700Bold}
+                  fontFamily={EFont.SourceSansPro_700Bold}
                   color={"text.primary"}
                 >
                   {title}
                 </Text>
                 <Text
                   fontSize={16}
-                  fontFamily={EFont.Quicksand_400Regular}
+                  fontFamily={EFont.SourceSansPro_400Regular}
                   color={"text.coolGray"}
                   mb={4}
                 >

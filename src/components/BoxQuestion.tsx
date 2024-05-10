@@ -23,13 +23,13 @@ const BoxQuestion = (props: Props) => {
   return (
     <Box
       style={{ width, height }}
-      bgColor={"primary.blue"}
+      bgColor={"#FFFFFF33"}
       borderRadius={8}
       alignItems={"center"}
       justifyContent={"center"}
     >
       <Text
-        fontFamily={EFont.Quicksand_700Bold}
+        fontFamily={EFont.SourceSansPro_700Bold}
         fontSize={fontSize}
         color={status == EQuizStatus.HIDDEN ? "#76c0f5" : "#fff"}
       >

@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 import React, { useState } from "react";
-import { Box, Center, HStack, VStack, useTheme } from "native-base";
+import { Box, Center, HStack, VStack, useTheme, Text } from "native-base";
 import BackgroundLayout from "../components/BackgroundLayout";
 import CustomBtn from "../components/CustomBtn";
 import PopupParent from "../components/PopupParent";
@@ -9,6 +9,8 @@ import { ScreenNavigationProps } from "../navigations/config";
 import { Audio } from "expo-av";
 import { loadSound } from "../utils/func";
 import { EOperation } from "../types/utils";
+import { SourceSansPro_700Bold } from "@expo-google-fonts/source-sans-pro";
+import { Image } from "expo-image";
 type Props = {};
 
 const Home = (props: Props) => {
@@ -34,61 +36,80 @@ const Home = (props: Props) => {
   };
 
   useFocusEffect(() => {
-    const playSound = new Audio.Sound();
-    loadSound(playSound, require("../../assets/sound/music.mp3"));
-    const unsubscribe = async () => {
-      await playSound.stopAsync();
-    };
-
-    return () => unsubscribe();
+    // const playSound = new Audio.Sound();
+    // loadSound(playSound, require("../../assets/sound/music.mp3"));
+    // const unsubscribe = async () => {
+    //   await playSound.stopAsync();
+    // };
+    // return () => unsubscribe();
   });
 
   return (
-    <BackgroundLayout imageSource={require("../../assets/images/bg-1.jpg")}>
+    <BackgroundLayout imageSource={require("../../assets/images/bg-1.png")}>
       {/* Popup */}
       <PopupParent showModal={showModal} setShowModal={setShowModal} />
-      <Box flex={1} justifyContent={"center"}>
-        <Center>
-          <VStack width={"80%"} space={4}>
-            <HStack justifyContent={"space-between"}>
+      <HStack flex={1} justifyContent={"center"}>
+        <Center flex={3}>
+          <VStack w="80%" space={4} justifyContent={"space-between"}>
+            <VStack space={4}>
+              <Text
+                color={"muted.900"}
+                fontWeight={SourceSansPro_700Bold}
+                fontSize={36}
+                textAlign={"center"}
+              >
+                Math Logic For Kid
+              </Text>
+              <HStack justifyContent={"space-between"} space="4">
+                <CustomBtn
+                  btnColor={colors.gradient.primary}
+                  text="Bài giảng"
+                  size="MD"
+                  handleBtn={navigateLessonsScreen}
+                />
+                <CustomBtn
+                  btnColor={colors.gradient.primary}
+                  text="Toán Logic"
+                  size="MD"
+                  handleBtn={navigateCountScreen}
+                />
+              </HStack>
+              <HStack justifyContent={"space-between"} space="4">
+                <CustomBtn
+                  btnColor={colors.gradient.primary}
+                  text="Phép nhân"
+                  size="MD"
+                  handleBtn={navigateMultiScreen}
+                />
+                <CustomBtn
+                  btnColor={colors.gradient.primary}
+                  text="Phép chia"
+                  size="MD"
+                  handleBtn={navigateDivideScreen}
+                />
+              </HStack>
+              <Text color={"muted.600"} fontSize={14} textAlign={"center"}>
+                Lựa chọn các chủ đề bài học
+              </Text>
+            </VStack>
+            <Box alignItems={"center"}>
               <CustomBtn
-                btnColor={colors.gradient.primary}
-                text="Bài giảng"
-                size="MD"
-                handleBtn={navigateLessonsScreen}
+                btnColor={colors.gradient.secondary.orange}
+                text="Dành cho phụ huynh"
+                size="XS"
+                handleBtn={() => setShowModal(true)}
               />
-              <CustomBtn
-                btnColor={colors.gradient.primary}
-                text="Đếm số"
-                size="MD"
-                handleBtn={navigateCountScreen}
-              />
-            </HStack>
-            <HStack justifyContent={"space-between"}>
-              <CustomBtn
-                btnColor={colors.gradient.primary}
-                text="Trắc nghiệm phép nhân"
-                size="MD"
-                handleBtn={navigateMultiScreen}
-              />
-              <CustomBtn
-                btnColor={colors.gradient.primary}
-                text="Trắc nghiệm phép chia"
-                size="MD"
-                handleBtn={navigateDivideScreen}
-              />
-            </HStack>
+            </Box>
           </VStack>
         </Center>
-      </Box>
-      <Box position={"absolute"} bottom={4} right={"10%"}>
-        <CustomBtn
-          btnColor={colors.gradient.secondary.orange}
-          text="Dành cho phụ huynh"
-          size="XS"
-          handleBtn={() => setShowModal(true)}
-        />
-      </Box>
+        <Box flex={2} px="8">
+          <Image
+            source={require("../../assets/images/home-obj.png")}
+            contentFit="contain"
+            style={{ height: "100%" }}
+          />
+        </Box>
+      </HStack>
     </BackgroundLayout>
   );
 };

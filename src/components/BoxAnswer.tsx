@@ -35,7 +35,7 @@ const BoxAnswer = (props: Props) => {
             style={{
               color: "white",
               fontSize,
-              fontFamily: EFont.Quicksand_700Bold,
+              fontFamily: EFont.SourceSansPro_700Bold,
               includeFontPadding: false,
             }}
           >

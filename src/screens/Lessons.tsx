@@ -1,6 +1,6 @@
 import { Alert, StyleSheet, TouchableOpacity, Button } from "react-native";
 import React, { useCallback, useRef, useState } from "react";
-import LessonLayout from "../components/LessonLayout";
+import LessonLayout, { ETypeImage } from "../components/LessonLayout";
 import { Box, Text, HStack, VStack, useTheme } from "native-base";
 import { ArrowLeft3, ArrowRight3 } from "iconsax-react-native";
 import { LinearGradient } from "expo-linear-gradient";
@@ -67,7 +67,7 @@ const Lessons = (props: Props) => {
   };
 
   return (
-    <LessonLayout iconSource={require("../../assets/images/bg-3.jpg")}>
+    <LessonLayout iconSource={require("../../assets/images/bg-1.png")} type={ETypeImage.LESSON}>
       <Box flex={1}>
         <VStack flex={1} justifyContent={"center"} alignItems={"center"}>
           <HStack alignItems={"center"} justifyContent={"space-between"} px={5}>
@@ -111,7 +111,7 @@ const Lessons = (props: Props) => {
           >
             <VStack>
               <Text
-                fontFamily={EFont.Quicksand_700Bold}
+                fontFamily={EFont.SourceSansPro_700Bold}
                 color="white"
                 fontSize={20}
               >
@@ -120,7 +120,7 @@ const Lessons = (props: Props) => {
               <HStack alignItems={"center"} space={1}>
                 <Box width={"80%"}>
                   <Text
-                    fontFamily={EFont.Quicksand_700Bold}
+                    fontFamily={EFont.SourceSansPro_700Bold}
                     color="white"
                     fontSize={16}
                     ellipsizeMode="tail"

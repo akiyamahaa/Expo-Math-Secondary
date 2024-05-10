@@ -88,7 +88,7 @@ const Collection = (props: Props) => {
           >
             <Box flex={1} justifyContent={"center"} alignItems={"center"}>
               <Text
-                fontFamily={EFont.Quicksand_700Bold}
+                fontFamily={EFont.SourceSansPro_700Bold}
                 fontSize={18}
                 color={"white"}
                 textTransform={"uppercase"}

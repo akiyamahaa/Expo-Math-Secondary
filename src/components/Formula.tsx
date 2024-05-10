@@ -36,7 +36,7 @@ const Formula = (props: Props) => {
           <Text
             color={status == EQuizStatus.HIDDEN ? "#76c0f5" : "#fff"}
             fontSize={fontSize}
-            fontFamily={EFont.Quicksand_700Bold}
+            fontFamily={EFont.SourceSansPro_700Bold}
           >
             {formula[option]}
           </Text>

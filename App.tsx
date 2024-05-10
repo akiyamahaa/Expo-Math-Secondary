@@ -7,22 +7,20 @@ import store from "./src/store";
 import { useEffect } from "react";
 import {
   useFonts,
-  Quicksand_300Light,
-  Quicksand_400Regular,
-  Quicksand_500Medium,
-  Quicksand_600SemiBold,
-  Quicksand_700Bold,
-} from "@expo-google-fonts/quicksand";
+  SourceSansPro_300Light,
+  SourceSansPro_400Regular,
+  SourceSansPro_600SemiBold,
+  SourceSansPro_700Bold,
+} from "@expo-google-fonts/source-sans-pro";
 import appTheme from "./src/theme";
 
 SplashScreen.preventAutoHideAsync();
 export default function App() {
   let [fontsLoaded] = useFonts({
-    Quicksand_300Light,
-    Quicksand_400Regular,
-    Quicksand_500Medium,
-    Quicksand_600SemiBold,
-    Quicksand_700Bold,
+    SourceSansPro_300Light,
+    SourceSansPro_400Regular,
+    SourceSansPro_600SemiBold,
+    SourceSansPro_700Bold,
   });
 
   useEffect(() => {

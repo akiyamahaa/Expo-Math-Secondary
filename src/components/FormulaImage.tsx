@@ -37,7 +37,7 @@ const FormulaImage = (props: Props) => {
       <HStack height={160} space={2}>
         {handleRenderImageQuiz(imageSlot)}
       </HStack  >
-      <Text color={"white"} fontSize={48} fontFamily={EFont.Quicksand_700Bold}>
+      <Text color={"white"} fontSize={48} fontFamily={EFont.SourceSansPro_700Bold}>
         =
       </Text>
       {/* Box Ques */}
