@@ -22,7 +22,7 @@ const FormulaLogic = (props: Props) => {
           }}
           contentFit="contain"
           source={{
-            uri: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2020/4/19/799500/Cau-Do-Tinh-Toan5.jpg",
+            uri: imageUrl,
           }}
         />
       </HStack>

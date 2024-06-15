@@ -8,38 +8,27 @@ import { useNavigation } from "@react-navigation/native";
 import { ScreenNavigationProps } from "../navigations/config";
 import PopupRightAnswer from "../components/PopupRightAnswer";
 import FormulaLogic from "../components/FormulaLogic";
+import { logicQuiz } from "../data/mockup";
+import { getRandomArray } from "../utils/func";
 
 type Props = {};
 
-const listTestImage: IQuizImage[] = [
-  {
-    imageUrl: "",
-    choices: [5, 3, 1],
-    answer: 5,
-  },
-  {
-    imageUrl: "",
-    choices: [5, 3, 1],
-    answer: 5,
-  },
-];
-
 const QuizLogic = (props: Props) => {
-  const { colors } = useTheme();
+  const [quizState] = useState(getRandomArray(logicQuiz, 3));
   const navigation = useNavigation<ScreenNavigationProps>();
   const [answerTag, setAnswerTag] = useState<ChildNode | null>(null);
   const [quesIndex, setQuesIndex] = useState(0);
   const [showModal, setShowModal] = useState(false);
 
   const handleNextQues = () => {
-    if (quesIndex < listTestImage.length - 1) {
+    if (quesIndex < quizState.length - 1) {
       setQuesIndex(quesIndex + 1);
       setAnswerTag(null);
       setShowModal(false);
     } else {
       setAnswerTag(null);
       setShowModal(false);
-      navigation.navigate("Collection");
+      navigation.navigate("Home");
     }
   };
 
@@ -48,6 +37,8 @@ const QuizLogic = (props: Props) => {
       setShowModal(true);
     }
   }, [answerTag]);
+
+  console.log(quizState[quesIndex].imageUrl);
 
   return (
     <LessonLayout
@@ -62,14 +53,14 @@ const QuizLogic = (props: Props) => {
       <Center flex={1}>
         <VStack space={10}>
           <FormulaLogic
-            imageUrl={listTestImage[quesIndex].imageUrl}
+            imageUrl={quizState[quesIndex].imageUrl}
             answerTag={answerTag}
           />
           <GroupAnswer
             size="M"
             dataAnswer={{
-              choices: listTestImage[quesIndex].choices,
-              answer: listTestImage[quesIndex].answer,
+              choices: quizState[quesIndex].choices,
+              answer: quizState[quesIndex].answer,
             }}
             answerTag={answerTag}
             setAnswerTag={setAnswerTag}

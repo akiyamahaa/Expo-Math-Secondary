@@ -25,22 +25,22 @@ LogBox.ignoreAllLogs();
 const Stack = createNativeStackNavigator<RootStackParams>();
 
 const Root = () => {
-  const [db, setDb] = useState<SQLite.Database>();
+  // const [db, setDb] = useState<SQLite.Database>();
 
   useEffect(() => {
-    const loadDb = () => {
-      try {
-        const db = getDBConnection();
-        // deleteTable(db, "badges");
-        // create Tables
-        Object.keys(models).map((tableName) =>
-          createTables(db, tableName, models[tableName])
-        );
-      } catch (error: any) {
-        throw new Error(error);
-      }
-    };
-    loadDb();
+    // const loadDb = () => {
+    //   try {
+    //     const db = getDBConnection();
+    //     // deleteTable(db, "badges");
+    //     // create Tables
+    //     Object.keys(models).map((tableName) =>
+    //       createTables(db, tableName, models[tableName])
+    //     );
+    //   } catch (error: any) {
+    //     throw new Error(error);
+    //   }
+    // };
+    // loadDb();
     const loadingSound = async () => {
       await Audio.setAudioModeAsync({
         allowsRecordingIOS: false,

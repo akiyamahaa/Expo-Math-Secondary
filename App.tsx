@@ -1,5 +1,4 @@
 import { NativeBaseProvider } from "native-base";
-import { StyleSheet } from "react-native";
 import { Provider } from "react-redux";
 import Root from "./src/navigations/Root";
 import * as SplashScreen from "expo-splash-screen";
@@ -40,5 +39,3 @@ export default function App() {
     </NativeBaseProvider>
   );
 }
-
-const styles = StyleSheet.create({});

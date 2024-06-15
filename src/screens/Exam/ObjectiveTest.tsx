@@ -30,7 +30,7 @@ const ObjectiveTest = (props: Props) => {
   const handleModalBtn = () => {
     setShowModal(false);
     if (infoModal.status) {
-      navigation.navigate("Collection");
+      navigation.navigate("Home");
     } else {
       navigation.navigate("Home");
     }
@@ -71,7 +71,7 @@ const ObjectiveTest = (props: Props) => {
           <Center px={4}>
             <Center width="100%">
               <Image
-                source={exams[randomNum].imageSource}
+                source={{ uri: exams[randomNum].imageSource }}
                 style={{
                   width: 300,
                   height: 180,

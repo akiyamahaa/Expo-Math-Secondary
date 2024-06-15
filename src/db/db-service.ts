@@ -1,16 +1,12 @@
-import { Database, openDatabase } from "expo-sqlite";
+import { openDatabaseAsync } from "expo-sqlite";
 import { Column } from "./models";
 
 export const getDBConnection = () => {
-  return openDatabase("m4k.db");
+  return openDatabaseAsync("m4k.db");
 };
 
 // ------------------------------- Create Table ---------------------------------------
-export const createTables = (
-  db: Database,
-  tableName: string,
-  columns: Column[]
-) => {
+export const createTables = (db: any, tableName: string, columns: Column[]) => {
   let colInfos = "";
   columns.forEach((col, index) => {
     colInfos += `${col.name} ${col.dataType}`;
