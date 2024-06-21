@@ -1,18 +1,14 @@
-# Logo
-
-<img src="images/Background.png" width="40%" alt='logo'>
-
-
 ## Demo App
 https://drive.google.com/file/d/1rzpQzCs642v4UIQn9d2vALdfHPNu_Hme/view?usp=sharing
 ## Table of Contents
+- [Demo App](#demo-app)
 - [Table of Contents](#table-of-contents)
-  - [About](#about)
-  - [Features](#features)
-  - [Screenshots](#screenshots)
-  - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
+- [About](#about)
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
 
 ## About
 
@@ -24,9 +20,12 @@ The M4K app makes it easy for children to study math in a more creative way. The
 
 ## Screenshots
 
-<img src="images/Screenone.jpg" width="40%" alt='screen1'>
-<img src="images/Screentwo.jpg" width="40%" alt='screen2'>
-<img src="images/Screenthree.jpg" width="40% alt='screen3'>
+<img src="images/math-img1.png" width="40%" alt='screen1'>
+<img src="images/math-img2.png" width="40%" alt='screen1'>
+<img src="images/math-img3.png" width="40%" alt='screen1'>
+<img src="images/math-img4.png" width="40%" alt='screen1'>
+<img src="images/math-img5.png" width="40%" alt='screen1'>
+<img src="images/math-img6.png" width="40%" alt='screen1'>
 
 ## Getting Started
 

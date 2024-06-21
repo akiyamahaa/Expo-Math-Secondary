@@ -49,7 +49,7 @@ const PopupParent = (props: Props) => {
             <Box pl={1} pr={3}>
               <Text fontFamily={EFont.SourceSansPro_400Regular} fontSize={14}>
                 Xin chào, chúng tôi rất vui khi quý vị đã lựa chọn sử dụng ứng
-                dụng dạy toán M4K. Để sử dụng một cách hiệu quả nhất, chúng tôi
+                dụng dạy toán Math Logic. Để sử dụng một cách hiệu quả nhất, chúng tôi
                 có một số hướng dẫn sử dụng như sau: 
                 {`\n`}- Cho con học môi ngày 1
                 bài, không học quá 
